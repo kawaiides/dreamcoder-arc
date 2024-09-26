@@ -12,7 +12,7 @@ import numpy as np
 from collections import deque
 from statistics import mode
 
-from typing import Tuple, Union, NewType, List, Callable, Dict, Type, FrozenSet, Iterable, Any
+from typing import Tuple, Union, NewType, List, Container, Callable, Dict, Type, FrozenSet, Iterable, Any
 
 tcolour = baseType("colour") # Any colour. We could use 1x1 grids for this, but by typing it we reduce the search space
 Colour = NewType("Colour", int)
