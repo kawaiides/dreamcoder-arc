@@ -303,7 +303,7 @@ dsl = DSL(typemap, verbose=False)
 ###### Shyam x Hodel kekw
 #############################
 
-# from typing import (
+ # from typing import (
 #     List,
 #     Union,
 #     Tuple,
@@ -583,8 +583,7 @@ def maximum(
     container: IntegerSet
 ) -> Integer:
     """ maximum """
-    return max(container, @dsl.primitive
-default=0)
+    return max(container, default=0)
 
 
 @dsl.primitive
@@ -592,8 +591,7 @@ def minimum(
     container: IntegerSet
 ) -> Integer:
     """ minimum """
-    return min(container, @dsl.primitive
-default=0)
+    return min(container, default=0)
 
 
 @dsl.primitive
@@ -602,8 +600,7 @@ def valmax(
     compfunc: Callable
 ) -> Integer:
     """ maximum by custom function """
-    return compfunc(max(container, key=compfunc, @dsl.primitive
-default=0))
+    return compfunc(max(container, key=compfunc, default=0))
 
 
 @dsl.primitive
@@ -612,8 +609,7 @@ def valmin(
     compfunc: Callable
 ) -> Integer:
     """ minimum by custom function """
-    return compfunc(min(container, key=compfunc, @dsl.primitive
-default=0))
+    return compfunc(min(container, key=compfunc, default=0))
 
 
 @dsl.primitive
@@ -622,8 +618,7 @@ def argmax(
     compfunc: Callable
 ) -> Any:
     """ largest item by custom order """
-    return max(container, key=compfunc, @dsl.primitive
-default=None)
+    return max(container, key=compfunc, default=None)
 
 
 @dsl.primitive
@@ -632,8 +627,7 @@ def argmin(
     compfunc: Callable
 ) -> Any:
     """ smallest item by custom order """
-    return min(container, key=compfunc, @dsl.primitive
-default=None)
+    return min(container, key=compfunc, default=None)
 
 
 @dsl.primitive
@@ -2065,7 +2059,6 @@ def vperiod(
         if pruned.issubset(normalized):
             return p
     return h
-
 
 #############################
 ###### Define primitives now
