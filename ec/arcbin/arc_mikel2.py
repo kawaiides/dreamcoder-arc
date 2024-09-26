@@ -27,7 +27,7 @@ def extra_args(parser):
 args = commandlineArguments(
     enumerationTimeout=120, 
     aic=0.1,
-    iterations=12, 
+    iterations=1, 
     recognitionTimeout=360,
     featureExtractor=MikelArcNet,
     useRecognitionModel=True,#True,
