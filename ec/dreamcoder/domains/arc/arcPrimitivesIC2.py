@@ -31,8 +31,13 @@ Count = NewType("Count", int)
 tgrid = baseType("grid") # Any grid. Position is always included
 
 # michael's types
-Boolean = bool
-Integer = int
+tInteger = baseType("Integer")
+Integer = NewType("Integer", int)
+
+tBoolean = baseType("Boolean")
+Boolean = NewType("Boolean", bool)
+
+Any = NewType("Any", Any)
 IntegerTuple = NewType("IntegerTuple", Tuple[Integer, Integer])
 Numerical = NewType("Numerical", Union[Integer, IntegerTuple])
 IntegerSet = NewType("IntegerSet", FrozenSet[Integer])
@@ -48,6 +53,7 @@ Piece = NewType("Piece", Union[Grid, Patch])
 TupleTuple = NewType("TupleTuple", Tuple[Tuple])
 ContainerContainer = NewType("ContainerContainer", Container[Container])
 
+tAny = baseType("Any")
 tIntegerTuple = baseType("IntegerTuple")
 tNumerical = baseType("Numerical")
 tIntegerSet = baseType("IntegerSet")
@@ -134,6 +140,9 @@ typemap: Dict[Type, TypeConstructor] = {
     Size: tsize,
     Count: tcount,
     Grid: tgrid,
+    Integer: tInteger,
+    Boolean: tBoolean,
+    Any: tAny,
     IntegerTuple : tIntegerTuple,
     Numerical : tNumerical,
     IntegerSet : tIntegerSet,
