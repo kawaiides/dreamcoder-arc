@@ -12,7 +12,12 @@ import numpy as np
 from collections import deque
 from statistics import mode
 
-from typing import Tuple, Union, NewType, List, Container, Callable, Dict, Type, FrozenSet, Iterable, Any
+from typing import Tuple\
+, Union\
+, NewType, List\
+, Container\
+, Callable, Dict, Type\
+, FrozenSet, Iterable, Any
 
 tcolour = baseType("colour") # Any colour. We could use 1x1 grids for this, but by typing it we reduce the search space
 Colour = NewType("Colour", int)
@@ -36,6 +41,16 @@ Integer = NewType("Integer", int)
 
 tBoolean = baseType("Boolean")
 Boolean = NewType("Boolean", bool)
+
+Container = NewType("Container", Container)
+Union = NewType("Union", Union)
+FrozenSet = NewType("FrozenSet", FrozenSet)
+Iterable = NewType("Iterable", Iterable)
+
+tContainer = baseType("Container")
+tUnion = baseType("Union")
+tFrozenSet = baseType("FrozenSet")
+tIterable = baseType("Iterable")
 
 Any = NewType("Any", Any)
 IntegerTuple = NewType("IntegerTuple", Tuple[Integer, Integer])
