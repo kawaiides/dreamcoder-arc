@@ -240,7 +240,7 @@ class TaskSet:
         
 
 def load_data() -> (TaskSet, TaskSet):
-    data = json.load(open(f"{os.path.dirname(__file__)}/arc1.json"))
+    data = json.load(open(f"/kaggle/input/arc-prize-2024/arc-agi_test_challenges.json"))
     train_tasks = []
     eval_tasks = []
     for id, task in data['train'].items():
@@ -255,7 +255,7 @@ def load_single(id: str) -> Task:
     """
     Load a single task from disk.
     """
-    data = json.load(open(f"{os.path.dirname(__file__)}/arc1.json"))
+    data = json.load(open(f"/kaggle/input/arc-prize-2024/arc-agi_test_challenges.json"))
     # task = data['train'][id]
     # return Task(id, task['train'], task['test'], 'train'
     if id.startswith('train'):
